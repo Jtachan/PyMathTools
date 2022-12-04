@@ -35,6 +35,9 @@ class GenericMatrix:
 
         self.__matrix = np.asarray(matrix, dtype=float)
 
+    def __str__(self) -> str:
+        return str(self.__matrix)
+
     def __iter__(self) -> Iterator[float]:
         """
         Enables iteration over all matrix's elements
