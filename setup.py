@@ -2,7 +2,7 @@
 import setuptools
 
 setuptools.setup(
-    name="pymath-instances",
+    name="pymath",
     description="The package contains simple and easy usable math-wrapper "
     "instances for packages as 'numpy' or 'transforms3d'",
     author="Jaime Gonzalez Gomez",
@@ -10,5 +10,7 @@ setuptools.setup(
     version="0.0.0",
     install_requires=[
         "numpy>=1.20.0",
-    ]
+        "transforms3d>=0.3.1",
+    ],
+    packages=["pymath"],
 )

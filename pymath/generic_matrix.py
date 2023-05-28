@@ -136,6 +136,26 @@ class GenericMatrix:
 
         return GenericMatrix(matrix=np.matmul(self.__matrix, other))
 
+    def __truediv__(
+        self, other: Union[npt.NDArray, GenericMatrix, float, int]
+    ) -> GenericMatrix:
+        """
+        Enables division through the operand '/'
+
+        Parameters
+        ----------
+        other
+            Element to divide the matrix. It can be a number (float or int) or
+            another matrix, stored as a numpy array or GenericMatrix instance.
+        """
+        if isinstance(other, (float, int)):
+            return GenericMatrix(self.__matrix / other)
+        elif isinstance(other, np.ndarray):
+            # This will raise any error for any non-2D matrix
+            other = GenericMatrix(other)
+
+        return self * other.inverse
+
     def __eq__(self, other: Union[npt.NDArray, GenericMatrix]) -> bool:
         """
         Enables the rich comparison with other matrices
@@ -203,3 +223,14 @@ class GenericMatrix:
             )
 
         return GenericMatrix(matrix=np.linalg.inv(self.__matrix))
+
+
+if __name__ == '__main__':
+    mat = GenericMatrix(np.array([[1, 2], [3, 4]]))
+    print(mat * 2)
+
+    mat_2 = GenericMatrix(np.array([[6, 7], [8, 9]]))
+    print(mat * mat_2)
+
+    print(mat_2 - mat)
+    print(mat + mat_2)
