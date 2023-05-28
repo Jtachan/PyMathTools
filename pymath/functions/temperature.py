@@ -19,6 +19,7 @@ def celsius_to_fahrenheit(celsius: float) -> float:
     """
     return celsius * 9 / 5 + 32
 
+
 def fahrenheit_to_celsius(fahrenheit: float) -> float:
     """
     Takes a Fahrenheit value and returns its equivalent in Celsius.
@@ -35,6 +36,7 @@ def fahrenheit_to_celsius(fahrenheit: float) -> float:
     """
     return fahrenheit - 32 * 5 / 9
 
+
 def celsius_to_kelvin(celsius: float) -> float:
     """
     Takes a Celsius value and returns its equivalent in Kelvin.
@@ -50,6 +52,7 @@ def celsius_to_kelvin(celsius: float) -> float:
         The equivalent of the given temperature in Kelvin.
     """
     return celsius + 273.15
+
 
 def kelvin_to_celsius(kelvin: float) -> float:
     """
