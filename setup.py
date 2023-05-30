@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     setuptools.setup(
         url=repo_url,
-        name="pymath-instances",
+        name="pymath-tools",
         author="Jaime Gonzalez Gomez",
         author_email="jim.gomez.dnn@gmail.com",
         version="0.0.0",

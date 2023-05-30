@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from typing import Union
 
-import pymath.functions.temperature as temp_functions
+import pymath_tools.functions.temperature as temp_functions
 
 
 class Temperature:
