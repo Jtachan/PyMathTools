@@ -34,7 +34,7 @@ def fahrenheit_to_celsius(fahrenheit: float) -> float:
     float:
         The equivalent of the given temperature in Celsius.
     """
-    return fahrenheit - 32 * 5 / 9
+    return (fahrenheit - 32) * 5 / 9
 
 
 def celsius_to_kelvin(celsius: float) -> float:
