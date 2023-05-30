@@ -1,5 +1,5 @@
 """
-This unit test file checks the correct behavior of the functions and instances absated
+This unit test file checks the correct behavior of the functions and instances related
 with temperature. As all the functions are used within the 'Temperature' class, only
 that class is being directly tested.
 """
@@ -15,7 +15,7 @@ from pymath_tools.instances import Temperature
 def test_temperature_conversion(celsius: float, kelvin: float, fahrenheit: float):
     """
     Basic tests on creation and conversion of the temperature using the instance.
-    The used values refer to 0 degrees in each temperature
+    The used values refer to 0 degrees in each temperature.
     """
     temp = Temperature(celsius=celsius)
     assert temp.kelvin == pytest.approx(
