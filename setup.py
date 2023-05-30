@@ -21,9 +21,4 @@ if __name__ == "__main__":
         install_requires=[
             "numpy>=1.20.0",
         ],
-        entry_points={
-            "console_scripts": [
-                # ScriptName=path.to.module.py:function_name
-            ]
-        },
     )
