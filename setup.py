@@ -18,7 +18,8 @@ if __name__ == "__main__":
         "and instances for general use.",
         long_description=long_description,
         long_description_content_type="text/markdown",
-        packages=["pymath_tools", "pymath_tools.functions", "pymath_tools.instances"],
+        packages=setuptools.find_namespace_packages(include=["pymath_tools.*"]),
+        namespace_packages=["pymath_tools"],
         install_requires=[
             "numpy>=1.20.0",
         ],
