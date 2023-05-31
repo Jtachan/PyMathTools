@@ -7,12 +7,14 @@ The following are the modules it contains:
 
 ## Setup and usage
 
-! WARNING !<br>
-Installation via `pip` is not implemented yet.
-
-The package can be installed via pip with the following command:
+The package's latest release can be installed via pip.
 ```commandline
-pip install pymath-tools
+pip install git+https://github.com/Jtachan/py-coding-hints.git
+```
+
+The `develop` branch, containing all the latest unreleased changes, can also be installed with the following command:
+```commandline
+pip install git+https://github.com/Jtachan/py-coding-hints.git@develop
 ```
 
 As an alternative, the repository can be cloned and locally installed.
