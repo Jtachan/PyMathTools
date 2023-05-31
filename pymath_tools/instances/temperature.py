@@ -3,8 +3,6 @@ This module contains the 'Temperature' instance
 """
 from __future__ import annotations
 
-from typing import Union
-
 import pymath_tools.functions.temperature as temp_functions
 
 
@@ -65,25 +63,3 @@ class Temperature:
     def kelvin(self) -> float:
         """float: The value of the measurement in Kelvin"""
         return temp_functions.celsius_to_kelvin(self.__celsius)
-
-    def __add__(self, other: Temperature) -> Temperature:
-        """
-        Allows addition to other values, which must be specified in Celsius.
-
-        Parameters
-        ----------
-        other: Temperature or float
-            Celsius degrees to add to the original class.
-
-        Returns
-        -------
-        Temperature:
-            New instance with the final value.
-        """
-        if not isinstance(other, Temperature):
-            raise ValueError(
-                "Addition only available to other 'Temperature' instances to avoid "
-                "adding different magnitudes."
-            )
-
-        return Temperature(self.__celsius + other.celsius)
