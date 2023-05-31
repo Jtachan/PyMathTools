@@ -11,8 +11,10 @@ import numpy.typing as npt
 
 class GenericMatrix:
     """
-    Class to work as a wrapper for numpy to work with 2 dimensional matrices
+    Class to work as a wrapper for numpy to work with 2-dimensional matrices
     """
+
+    __slots__ = ["__matrix"]
 
     def __init__(self, matrix: npt.NDArray):
         """
@@ -49,7 +51,7 @@ class GenericMatrix:
         self, other: Union[GenericMatrix, npt.NDArray]
     ) -> GenericMatrix:
         """
-        Enables the sum through the '+' character
+        Enables the sum through the '+' operand
 
         Parameters
         ----------
@@ -71,7 +73,7 @@ class GenericMatrix:
         if self.shape != other.shape:
             raise ValueError("Cannot sum matrices with different shape")
 
-        return GenericMatrix(matrix=self.__matrix + other)
+        return GenericMatrix(self.__matrix + other)
 
     def __sub__(
         self, other: Union[GenericMatrix, npt.NDArray]
@@ -99,7 +101,7 @@ class GenericMatrix:
         if self.shape != other.shape:
             raise ValueError("Cannot sum matrices with different shape")
 
-        return GenericMatrix(matrix=self.__matrix - other)
+        return GenericMatrix(self.__matrix - other)
 
     def __mul__(
         self, other: Union[int, float, npt.NDArray, GenericMatrix]
@@ -223,14 +225,3 @@ class GenericMatrix:
             )
 
         return GenericMatrix(matrix=np.linalg.inv(self.__matrix))
-
-
-if __name__ == '__main__':
-    mat = GenericMatrix(np.array([[1, 2], [3, 4]]))
-    print(mat * 2)
-
-    mat_2 = GenericMatrix(np.array([[6, 7], [8, 9]]))
-    print(mat * mat_2)
-
-    print(mat_2 - mat)
-    print(mat + mat_2)
