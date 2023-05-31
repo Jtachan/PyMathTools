@@ -1,39 +1,30 @@
-# Pymath Instances
+# PyMath Tools
 
-`pymath` offers python classes, to be used as instances, for math purposes. The instances presented at the package are:
+`Pymath Tools` contains instances and functions for easy use and unit conversion at any script.
+The following are the modules it contains:
 
-- [`GenericMatrix`](#genericmatrix): 2-Dimensional matrix usage
+* [Temperature](#temperature)
 
-## Why should I use pymath?
+## Setup and usage
 
-**Sanity checks**
-<br/>Each class contains sanity checks to be performed in the background for math operators as well as for the class definition.
+The package's latest release can be installed via pip.
+```commandline
+pip install git+https://github.com/Jtachan/py-coding-hints.git
+```
 
-**Cleaner code**
-<br/>By the use of these instances, the math operations result in shorter and cleaner code. Take the following example:
-````python
-# Matrix multiplication: numpy approach
-import numpy as np
-mat_a = np.array(...)
-mat_b = np.array(...)
-mat_c = np.array(...)
+The `develop` branch, containing all the latest unreleased changes, can also be installed with the following command:
+```commandline
+pip install git+https://github.com/Jtachan/py-coding-hints.git@develop
+```
 
-result = np.matmul(mat_a, np.matmul(mat_b, mat_c))
+As an alternative, the repository can be cloned and locally installed.
+```commandline
+pip install -e
+```
 
-# Matrix multiplication: pymath approach
-from pymath import GenericMatrix
-mat_a = GenericMatrix(...)
-mat_b = GenericMatrix(...)
-mat_c = GenericMatrix(...)
+Once it is installed, access the content by importing from `pymath_tools.functions` or `pymath_tools.instances`:
 
-result = mat_a * mat_b * mat_c
-````
-
-**Compatibility**
-<br/>All classes contain code compatibility to each other through the call of inner instances.
-Compatibility with `numpy` is also present, containing all classes the property `as_array`, which returns its numpy representation.
-
-## Classes/Instances
+## Modules
 
 ### GenericMatrix
 
@@ -50,7 +41,7 @@ It also contains the following properties:
 * `GenericMatrix.as_array`: Returns the numpy array representation of the matrix.
 ````python
 import numpy as np
-from pymath import GenericMatrix
+from pymath_tools.instances import GenericMatrix
 
 mat_1 = GenericMatrix(matrix=np.array([[1, 2], [3, 4]]))
 mat_2 = GenericMatrix(np.array([[6, 7], [8, 9]]))
@@ -71,3 +62,36 @@ print(mat_2 - mat_1)
 # [[5. 5.]
 #  [5. 5.]]
 ````
+
+### Temperature
+
+The `temperature` module allows easy use and conversion among temperature. 
+To do so, the `Temperature` class can be used:
+
+```python
+from pymath_tools.instances import Temperature
+
+temperature = Temperature(celsius=100)
+print(temperature.kelvin)  # This prints '373.15'
+print(temperature.fahrenheit)  # This prints '212.0'
+```
+
+While the instance is mainly initialized with Celsius degrees, it also allows the initialization from Fahrenheit and Kelvin:
+
+```python
+from pymath_tools.instances import Temperature
+
+temperature = Temperature.from_kelvin(kelvin=297.15)
+print(temperature.celsius)  # This prints '24.0'
+temperature = Temperature.from_fahrenheit(fahrenheit=75.2)
+print(temperature.celsius)  # This prints '24.0'
+```
+
+As an alternative, functions to convert among magnitudes can also be imported from `pymath_tools.functions`.
+The available functions are:
+- `celsius_to_fahrenheit(celsius: float)`: Converts a Celsius value into its equivalent in Fahrenheit.
+- `celsius_to_kelvin(celsius: float)`: Converts a Celsius value into its equivalent in Kelvin.
+- `fahrenheit_to_celsius(fahrenheit: float)`: Converts a Fahrenheit value into its equivalent in Celsius.
+- `fahrenheit_to_kelvin(fahrenheit: float)`: Converts a Fahrenheit value into its equivalent in Kelvin.
+- `kelvin_to_celsius(kelvin: float)`: Converts a Kelvin value into its equivalent in Celsius.
+- `kelvin_to_fahrenheit(kelvin: float)`: Converts a Kelvin value into its equivalent in Fahrenheit.
