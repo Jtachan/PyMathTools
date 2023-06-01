@@ -18,7 +18,7 @@ class GenericMatrix:
 
     def __init__(self, matrix: npt.NDArray):
         """
-        Inits the GenericMatrix
+        Initiates the GenericMatrix
 
         Parameters
         ----------
