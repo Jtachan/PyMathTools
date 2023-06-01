@@ -32,11 +32,11 @@ Once it is installed, access the content by importing from `pymath_tools.functio
 A new matrix can be defined by feeding the class the numpy array as value.
 
 The instance allows the **basic matrix operations**:
-* Multiply the matrix by and `int` or `float`
-* Sum, subtract and multiply operations by other matrices
+* Multiply and divide the matrix by and `int` or `float`
+* Sum, subtract, multiply and divide operations by other matrices
 
 It also contains the following properties:
-* ``GenericMatrix.inverse``: returns the inverse of the matrix (only available for squared matrices)
+* `GenericMatrix.inverse`: returns the inverse of the matrix (only available for squared matrices)
 * `GenericMatrix.shape`: Analogous to `np.shape`
 * `GenericMatrix.as_array`: Returns the numpy array representation of the matrix.
 ````python
