@@ -25,6 +25,44 @@ pip install -e
 Once it is installed, access the content by importing from `pymath_tools.functions` or `pymath_tools.instances`:
 
 ## Modules
+
+### GenericMatrix
+
+`GenericMatrix` allows easy 2D matrix usage as python instances.
+A new matrix can be defined by feeding the class the numpy array as value.
+
+The instance allows the **basic matrix operations**:
+* Multiply and divide the matrix by and `int` or `float`
+* Sum, subtract, multiply and divide operations by other matrices
+
+It also contains the following properties:
+* `GenericMatrix.inverse`: returns the inverse of the matrix (only available for squared matrices)
+* `GenericMatrix.shape`: Analogous to `np.shape`
+* `GenericMatrix.as_array`: Returns the numpy array representation of the matrix.
+````python
+import numpy as np
+from pymath_tools.instances import GenericMatrix
+
+mat_1 = GenericMatrix(matrix=np.array([[1, 2], [3, 4]]))
+mat_2 = GenericMatrix(np.array([[6, 7], [8, 9]]))
+
+print(mat_1 * 2)
+# [[2. 4.]
+#  [6. 8.]]
+
+print(mat_1 * mat_2)
+# [[22. 25.]
+#  [50. 57.]]
+
+print(mat_1 + mat_2)
+# [[ 7.  9.]
+#  [11. 13.]]
+
+print(mat_2 - mat_1)
+# [[5. 5.]
+#  [5. 5.]]
+````
+
 ### Temperature
 
 The `temperature` module allows easy use and conversion among temperature. 
