@@ -1,10 +1,11 @@
 """
 Test module for GenericMatrix
 """
-from pymath import GenericMatrix
+from random import randint
+
 import numpy as np
 import pytest
-from random import randint
+from pymath import GenericMatrix
 
 
 @pytest.mark.parametrize(
@@ -12,7 +13,7 @@ from random import randint
     (
         np.array([[1, 2], [3, 4]]),
         np.array([[0.3, 0.7], [3, 4]]),
-    )
+    ),
 )
 def test_equal_method(np_matrix):
     """
@@ -35,15 +36,13 @@ def test_equal_method(np_matrix):
     [
         (
             np.array(
-                [[randint(-5, 5), randint(-5, 5)],
-                 [randint(-5, 5), randint(-5, 5)]]
+                [[randint(-5, 5), randint(-5, 5)], [randint(-5, 5), randint(-5, 5)]]
             ),
             np.array(
-                [[randint(-5, 5), randint(-5, 5)],
-                 [randint(-5, 5), randint(-5, 5)]]
+                [[randint(-5, 5), randint(-5, 5)], [randint(-5, 5), randint(-5, 5)]]
             ),
         )
-    ]
+    ],
 )
 def test_assert_math_operands(mat_a, mat_b):
     """
@@ -60,5 +59,3 @@ def test_assert_math_operands(mat_a, mat_b):
 
     assert gen_mat_a * 1.5 == mat_a * 1.5
     assert gen_mat_a * gen_mat_b == np.matmul(mat_a, mat_b)
-
-

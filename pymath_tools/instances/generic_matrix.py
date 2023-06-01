@@ -3,7 +3,7 @@ This module contains the GenericMatrix class
 """
 from __future__ import annotations
 
-from typing import Iterator, Tuple, Union, Sequence
+from typing import Iterator, Sequence, Tuple, Union
 
 import numpy as np
 import numpy.typing as npt
@@ -47,9 +47,7 @@ class GenericMatrix:
         for element in self.__matrix:
             yield element
 
-    def __add__(
-        self, other: Union[GenericMatrix, npt.NDArray]
-    ) -> GenericMatrix:
+    def __add__(self, other: Union[GenericMatrix, npt.NDArray]) -> GenericMatrix:
         """
         Enables the sum through the '+' operand
 
@@ -66,18 +64,14 @@ class GenericMatrix:
         if isinstance(other, GenericMatrix):
             other = other.as_array
         elif not isinstance(other, np.ndarray):
-            raise TypeError(
-                f"Unsupported type '{type(other)}' for sum operator"
-            )
+            raise TypeError(f"Unsupported type '{type(other)}' for sum operator")
 
         if self.shape != other.shape:
             raise ValueError("Cannot sum matrices with different shape")
 
         return GenericMatrix(self.__matrix + other)
 
-    def __sub__(
-        self, other: Union[GenericMatrix, npt.NDArray]
-    ) -> GenericMatrix:
+    def __sub__(self, other: Union[GenericMatrix, npt.NDArray]) -> GenericMatrix:
         """
         Enables the subtraction through the '-' character
 
@@ -94,9 +88,7 @@ class GenericMatrix:
         if isinstance(other, GenericMatrix):
             other = other.as_array
         elif not isinstance(other, np.ndarray):
-            raise TypeError(
-                f"Unsupported type '{type(other)}' for sum operator"
-            )
+            raise TypeError(f"Unsupported type '{type(other)}' for sum operator")
 
         if self.shape != other.shape:
             raise ValueError("Cannot sum matrices with different shape")
@@ -220,8 +212,6 @@ class GenericMatrix:
     def inverse(self) -> GenericMatrix:
         """GenericMatrix: Inverse of the given matrix"""
         if self.shape[0] != self.shape[1]:
-            raise ValueError(
-                "The inverse matrix is only valid for square matrices"
-            )
+            raise ValueError("The inverse matrix is only valid for square matrices")
 
         return GenericMatrix(matrix=np.linalg.inv(self.__matrix))
