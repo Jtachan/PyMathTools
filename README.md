@@ -65,25 +65,39 @@ print(mat_2 - mat_1)
 
 ### Temperature
 
-The `temperature` module allows easy use and conversion among temperature. 
-To do so, the `Temperature` class can be used:
+The `temperature` module allows easy use and conversion among temperature scales. 
+To do so, the `Temperature` class can be used by specifying its value and the scale in which the value is defined.
+
+`pymath_tools.instances.Temperature(value: float, scale: Literal[str])`
+
+* `value`: Value of the temperature to initialize.
+* `scale`: Temperature scale for the value to be initialized. It must be either the scale's name in lowercase ("celsius", "kelvin" or "fahrenheit") or their initials ("c", "k" or "f").
+
+Temperature instances can also be initialized by the following classmethods:
+
+* `Temperature.from_celsius(celsius_value: float)`: Initializes a `Temperature` instance from the specified Celsius value.
+* `Temperature.from_kelvin(kelvin_value: float)`: Initializes a `Temperature` instance from the specified Kelvin value.
+* `Temperature.from_fahrenheit(fahrenheit_value: float)`: Initializes a `Temperature` instance from the specified Fahrenheit value.
+
+At last, other scales from the same temperature can be obtained with the **properties**:
+
+* `Temperature.celsius`: Returns the float value of the initialized temperature in Celsius.
+* `Temperature.kelvin`: Returns the float value of the initialized temperature in Kelvin.
+* `Temperature.fahrenheit`: Returns the float value of the initialized temperature in Fahrenheit.
 
 ```python
 from pymath_tools.instances import Temperature
 
-temperature = Temperature(celsius=100)
+temperature = Temperature(value=100, scale="celsius")
+print(temperature.celsius)  # This prints '100.0'
 print(temperature.kelvin)  # This prints '373.15'
 print(temperature.fahrenheit)  # This prints '212.0'
-```
 
-While the instance is mainly initialized with Celsius degrees, it also allows the initialization from Fahrenheit and Kelvin:
-
-```python
-from pymath_tools.instances import Temperature
-
-temperature = Temperature.from_kelvin(kelvin=297.15)
+temperature = Temperature.from_celsius(24.0)
 print(temperature.celsius)  # This prints '24.0'
-temperature = Temperature.from_fahrenheit(fahrenheit=75.2)
+temperature = Temperature.from_kelvin(297.15)
+print(temperature.celsius)  # This prints '24.0'
+temperature = Temperature.from_fahrenheit(75.2)
 print(temperature.celsius)  # This prints '24.0'
 ```
 

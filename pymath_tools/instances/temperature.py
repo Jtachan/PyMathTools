@@ -22,18 +22,16 @@ class Temperature:
         scale: Literal["celsius", "c", "kelvin", "k", "fahrenheit", "f"],
     ):
         """
-        Initializes the class from the value of a temperature.
-        The scale of the temperature must also be defined.
+        Initializes the class from the value of a temperature. The scale of the
+        temperature must also be defined.
 
         Parameters
         ----------
         value: float
             The temperature value.
         scale: str
-            The temperature scale in which the value is defined.
-            It should be the
-            full name of the scale in lowercase
-            ('celsius', 'kelvin' or 'fahrenheit')
+            The temperature scale in which the value is defined. It should be the
+            full name of the scale in lowercase ('celsius', 'kelvin' or 'fahrenheit')
             or their initials ('c', 'k', 'f')
         """
         if scale in ("kelvin", "k"):
