@@ -17,7 +17,7 @@ def test_temperature_conversion(celsius: float, kelvin: float, fahrenheit: float
     Basic tests on creation and conversion of the temperature using the instance.
     The used values refer to 0 degrees in each temperature.
     """
-    temp = Temperature(celsius=celsius)
+    temp = Temperature.from_celsius(celsius_value=celsius)
     assert temp.kelvin == pytest.approx(
         kelvin, abs=1e-2
     ), "Failed conversion Celsius to Kelvin"
@@ -25,7 +25,7 @@ def test_temperature_conversion(celsius: float, kelvin: float, fahrenheit: float
         fahrenheit, abs=1e-2
     ), "Failed conversion Celsius to Fahrenheit"
 
-    temp = Temperature.from_kelvin(kelvin=kelvin)
+    temp = Temperature.from_kelvin(kelvin_value=kelvin)
     assert temp.celsius == pytest.approx(
         celsius, abs=1e-2
     ), "Failed conversion Kelvin to Celsius"
@@ -33,7 +33,7 @@ def test_temperature_conversion(celsius: float, kelvin: float, fahrenheit: float
         fahrenheit, abs=1e-2
     ), "Failed conversion Kelvin to Fahrenheit"
 
-    temp = Temperature.from_fahrenheit(fahrenheit=fahrenheit)
+    temp = Temperature.from_fahrenheit(fahrenheit_value=fahrenheit)
     assert temp.celsius == pytest.approx(
         celsius, abs=1e-2
     ), "Failed conversion Fahrenheit to Celsius"
