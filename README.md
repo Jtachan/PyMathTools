@@ -3,6 +3,7 @@
 `Pymath Tools` contains instances and functions for easy use and unit conversion at any script.
 The following are the modules it contains:
 
+* [GenericMatrix](#genericmatrix)
 * [Temperature](#temperature)
 
 ## Setup and usage
@@ -19,7 +20,7 @@ pip install git+https://github.com/Jtachan/py-coding-hints.git@develop
 
 As an alternative, the repository can be cloned and locally installed.
 ```commandline
-pip install -e
+pip install -e .
 ```
 
 Once it is installed, access the content by importing from `pymath_tools.functions` or `pymath_tools.instances`:
