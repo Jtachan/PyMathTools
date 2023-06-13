@@ -1,7 +1,7 @@
 """ Setup file to make the content installable """
 import setuptools
 
-repo_url = "https://github.com/Jtachan/py-coding-hints.git"
+repo_url = "https://github.com/Jtachan/PyMathTools.git"
 
 if __name__ == "__main__":
     with open("README.md", "r", encoding="utf-8") as fh:
