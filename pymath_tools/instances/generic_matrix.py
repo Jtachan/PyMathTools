@@ -8,6 +8,8 @@ from typing import Iterator, Sequence, Tuple, Union
 import numpy as np
 import numpy.typing as npt
 
+from pymath_tools.instances.exceptions import DimensionError, SingularMatrixError
+
 
 class GenericMatrix:
     """
@@ -30,7 +32,7 @@ class GenericMatrix:
                 "The given matrix must be initially defined as a numpy array"
             )
         if len(matrix.shape) != 2:
-            raise ValueError(
+            raise DimensionError(
                 "The given matrix does not specifies the dimension "
                 "requirement. Please, confirm you have given an NxM matrix."
             )
@@ -67,7 +69,7 @@ class GenericMatrix:
             raise TypeError(f"Unsupported type '{type(other)}' for sum operator")
 
         if self.shape != other.shape:
-            raise ValueError("Cannot sum matrices with different shape")
+            raise DimensionError("Cannot sum matrices with different shape")
 
         return GenericMatrix(self.__matrix + other)
 
@@ -91,7 +93,7 @@ class GenericMatrix:
             raise TypeError(f"Unsupported type '{type(other)}' for sum operator")
 
         if self.shape != other.shape:
-            raise ValueError("Cannot sum matrices with different shape")
+            raise DimensionError("Cannot sum matrices with different shape")
 
         return GenericMatrix(self.__matrix - other)
 
@@ -120,7 +122,7 @@ class GenericMatrix:
             return GenericMatrix(matrix=self.__matrix * other)
 
         if self.shape[1] != other.shape[0]:
-            raise ValueError(
+            raise DimensionError(
                 "Cannot multiply the given matrices, due their shapes are not "
                 "(A, N) and (N, B)."
             )
@@ -209,9 +211,28 @@ class GenericMatrix:
         return self.__matrix.shape
 
     @property
+    def determinant(self) -> float:
+        """float: The value the matrix's determinant"""
+        if self.shape[0] != self.shape[1]:
+            raise DimensionError(
+                "Determinants can only be calculated for square matrices"
+            )
+
+        return np.linalg.det(self.__matrix)
+
+    @property
+    def is_singular(self) -> bool:
+        """bool: whether the matrix is singular"""
+        if self.shape[0] != self.shape[1]:
+            return False
+        return np.linalg.det(self.__matrix) == 0
+
+    @property
     def inverse(self) -> GenericMatrix:
         """GenericMatrix: Inverse of the given matrix"""
         if self.shape[0] != self.shape[1]:
-            raise ValueError("The inverse matrix is only valid for square matrices")
+            raise DimensionError("The inverse matrix is only valid for square matrices")
+        if self.is_singular:
+            raise SingularMatrixError("Singular matrices have no inverse.")
 
         return GenericMatrix(matrix=np.linalg.inv(self.__matrix))
