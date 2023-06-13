@@ -5,5 +5,4 @@ build
 *.egg-info
 
 # Files
-formatters.txt
-check_pkg.bat
+*.bat

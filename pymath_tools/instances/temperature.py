@@ -14,7 +14,7 @@ class Temperature:
     properties to also read it at any unit.
     """
 
-    __slots__ = "__celsius"
+    __slots__ = ("__celsius",)
 
     def __init__(
         self,

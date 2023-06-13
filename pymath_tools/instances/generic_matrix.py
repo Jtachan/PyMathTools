@@ -144,7 +144,7 @@ class GenericMatrix:
         """
         if isinstance(other, (float, int)):
             return GenericMatrix(self.__matrix / other)
-        elif isinstance(other, np.ndarray):
+        if isinstance(other, np.ndarray):
             # This will raise any error for any non-2D matrix
             other = GenericMatrix(other)
 
@@ -190,7 +190,7 @@ class GenericMatrix:
                 f"Type value '{type(value)}' was given, but expected "
                 f"'np.ndarray' for coordinate '{key}'"
             )
-        elif isinstance(key, Sequence) and not isinstance(value, (int, float)):
+        if isinstance(key, Sequence) and not isinstance(value, (int, float)):
             raise ValueError(
                 f"Type value '{type(value)}' was given, but expected "
                 f"'float' for coordinate '{key}'"
