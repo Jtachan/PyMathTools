@@ -67,6 +67,8 @@ def test_assert_math_operands(mat_a, mat_b):
     ), "Matrix multiplication failed"
 
     assert gen_mat_a / 1.5 == mat_a / 1.5, "Number division failed"
-    assert gen_mat_a / gen_mat_b == np.matmul(
-        mat_a, np.linalg.inv(mat_b)
-    ), "Matrix division failed"
+
+    if not gen_mat_b.is_singular:
+        assert gen_mat_a / gen_mat_b == np.matmul(
+            mat_a, np.linalg.inv(mat_b)
+        ), "Matrix division failed"
