@@ -1,5 +1,7 @@
 # PyMath Tools
 
+![Badge](https://github.com/Jtachan/PyMathTools/actions/workflows/unittests.yml/badge.svg)
+
 `Pymath Tools` contains instances and functions for easy use and unit conversion at any script.
 The following are the modules it contains:
 
@@ -10,12 +12,12 @@ The following are the modules it contains:
 
 The package's latest release can be installed via pip.
 ```commandline
-pip install git+https://github.com/Jtachan/py-coding-hints.git
+pip install git+https://github.com/Jtachan/PyMathTools.git
 ```
 
 The `develop` branch, containing all the latest unreleased changes, can also be installed with the following command:
 ```commandline
-pip install git+https://github.com/Jtachan/py-coding-hints.git@develop
+pip install git+https://github.com/Jtachan/PyMathTools.git@develop
 ```
 
 As an alternative, the repository can be cloned and locally installed.
