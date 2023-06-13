@@ -12,7 +12,7 @@ if __name__ == "__main__":
         name="pymath-tools",
         author="Jaime Gonzalez Gomez",
         author_email="jim.gomez.dnn@gmail.com",
-        version="0.0.0",
+        version="0.1.0",
         python_requires=">=3.8",
         description="The package contains simple and easy usable math functions "
         "and instances for general use.",
