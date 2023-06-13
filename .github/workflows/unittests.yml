@@ -1,17 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: gh_actions
+name: package-unittests
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
-  push:
-    branches: ["master", "develop"]
-  pull_request:
-    branches: [ "master", "develop" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  - push
+  - pull_request
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,12 +27,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Install dependencies
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          python -m pip install --upgrade pip
+          pip install tox tox-gh-actions
+      - name: Test with tox
+        run: tox
