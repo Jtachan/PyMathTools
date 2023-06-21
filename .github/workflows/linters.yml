@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  build:
+  code_check:
     runs-on: ubuntu-latest
 
     steps:
