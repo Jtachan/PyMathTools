@@ -91,3 +91,6 @@ class Temperature:
     def kelvin(self) -> float:
         """float: The value of the measurement in Kelvin"""
         return temp_functions.celsius_to_kelvin(self.__celsius)
+
+    def __repr__(self) -> str:
+        return f"{self.celsius} °C, {self.fahrenheit} °F, {self.kelvin} °K"
