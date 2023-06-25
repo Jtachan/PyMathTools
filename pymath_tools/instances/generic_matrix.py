@@ -18,19 +18,19 @@ class GenericMatrix:
 
     __slots__ = ["__matrix"]
 
-    def __init__(self, matrix: npt.NDArray):
+    def __init__(
+        self, matrix: Union[npt.NDArray, Tuple[Sequence[float], Sequence[float]]]
+    ):
         """
         Initiates the GenericMatrix
 
         Parameters
         ----------
-        matrix: numpy N-dimensional array
-            Matrix defined as a numpy array
+        matrix: tuple or numpy N-dimensional array
+            Matrix defined as a numpy array or as a tuple.
         """
         if not isinstance(matrix, np.ndarray):
-            raise TypeError(
-                "The given matrix must be initially defined as a numpy array"
-            )
+            matrix = np.asarray(matrix)
         if len(matrix.shape) != 2:
             raise DimensionError(
                 "The given matrix does not specifies the dimension "
