@@ -78,6 +78,9 @@ print(kelvin_to_celsius(310.15))
 
 The `Temperature` instances work as a wrapper for the functions, providing a continuous simple and easy usage of them.
 
+It also provides the **operations** of sum and subtraction among other Temperature instances.
+It is not allowed to add scalars as not all scales contain linearity among each other.
+
 ### `Temperature(value: float, scale: Literal['celsius', 'c', 'kelvin', 'k', 'fahrenheit', 'f'])`
 
 Class to be initialized for any temperature scale.
