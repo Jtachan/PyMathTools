@@ -94,3 +94,17 @@ class Temperature:
 
     def __repr__(self) -> str:
         return f"{self.celsius} °C, {self.fahrenheit} °F, {self.kelvin} °K"
+
+    def __add__(self, other: Temperature) -> Temperature:
+        if not isinstance(other, Temperature):
+            raise ValueError("Addition is only supported among Temperature instances.")
+
+        return Temperature(value=self.__celsius + other.celsius, scale="c")
+
+    def __sub__(self, other: Temperature) -> Temperature:
+        if not isinstance(other, Temperature):
+            raise ValueError(
+                "Subtraction is only supported among Temperature instances."
+            )
+
+        return Temperature(value=self.__celsius - other.celsius, scale="c")
