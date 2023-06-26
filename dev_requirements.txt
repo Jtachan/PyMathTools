@@ -4,3 +4,5 @@ tox==4.6.*
 black==23.3.*
 isort==5.12.*
 pytest==7.3.*
+mkdocs==1.4.*
+mkdocs-material==9.1.*

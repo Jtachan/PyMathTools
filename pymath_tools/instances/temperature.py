@@ -54,18 +54,6 @@ class Temperature:
         return cls(value=celsius_value, scale="c")
 
     @classmethod
-    def from_kelvin(cls, kelvin_value: float) -> Temperature:
-        """
-        Initializes the class from the value of a Kelvin temperature.
-
-        Parameters
-        ----------
-        kelvin_value: float
-            The temperature specified in Kelvin.
-        """
-        return cls(value=kelvin_value, scale="k")
-
-    @classmethod
     def from_fahrenheit(cls, fahrenheit_value: float) -> Temperature:
         """
         Initializes the class from the value of a Fahrenheit temperature.
@@ -76,6 +64,18 @@ class Temperature:
             The temperature specified in Fahrenheit.
         """
         return cls(value=fahrenheit_value, scale="f")
+
+    @classmethod
+    def from_kelvin(cls, kelvin_value: float) -> Temperature:
+        """
+        Initializes the class from the value of a Kelvin temperature.
+
+        Parameters
+        ----------
+        kelvin_value: float
+            The temperature specified in Kelvin.
+        """
+        return cls(value=kelvin_value, scale="k")
 
     @property
     def celsius(self) -> float:
@@ -91,3 +91,6 @@ class Temperature:
     def kelvin(self) -> float:
         """float: The value of the measurement in Kelvin"""
         return temp_functions.celsius_to_kelvin(self.__celsius)
+
+    def __repr__(self) -> str:
+        return f"{self.celsius} °C, {self.fahrenheit} °F, {self.kelvin} °K"
