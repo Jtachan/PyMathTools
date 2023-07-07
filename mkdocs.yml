@@ -1,6 +1,11 @@
 site_name: Pymath Tools
 site_url: https://https://jtachan.github.io/PyMathTools/
 
+nav:
+  - Home: "index.md"
+  - Temperature: "temperature.md"
+  - Matrix: "matrix.md"
+
 theme:
   name: material
   features:
