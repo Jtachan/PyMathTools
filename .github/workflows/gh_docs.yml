@@ -2,7 +2,7 @@ name: Documentation
 on:
   push:
     branches:
-      - "master"
+      - "*"
   pull_request:
     branches:
       - "master"
@@ -24,6 +24,6 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material
+      - run: pip install mkdocs mkdocs-material
       - run: pip install pillow cairosvg
-      - run: mkdocs gh-deploy
+      - run: mkdocs gh-deploy --force
