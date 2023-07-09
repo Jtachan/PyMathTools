@@ -1,0 +1,641 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://https:/jtachan.github.io/PyMathTools/temperature/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../matrix/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Temperature - Pymath Tools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Temperature - Pymath Tools" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://https://jtachan.github.io/PyMathTools/assets/images/social/temperature.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://https:/jtachan.github.io/PyMathTools/temperature/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Temperature - Pymath Tools" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://https://jtachan.github.io/PyMathTools/assets/images/social/temperature.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#temperature" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Pymath Tools" class="md-header__button md-logo" aria-label="Pymath Tools" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pymath Tools
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Temperature
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Temperature
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../matrix/" class="md-tabs__link">
+      Matrix
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pymath Tools" class="md-nav__button md-logo" aria-label="Pymath Tools" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Pymath Tools
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Temperature
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Temperature
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#celsius_to_fahrenheitcelsius-float" class="md-nav__link">
+    celsius_to_fahrenheit(celsius: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celsius_to_kelvincelsius-float" class="md-nav__link">
+    celsius_to_kelvin(celsius: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fahrenheit_to_celsiusfahrenheit-float" class="md-nav__link">
+    fahrenheit_to_celsius(fahrenheit: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fahrenheit_to_kelvinfahrenheit-float" class="md-nav__link">
+    fahrenheit_to_kelvin(fahrenheit: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kelvin_to_celsiuskelvin-float" class="md-nav__link">
+    kelvin_to_celsius(kelvin: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kelvin_to_fahrenheitkelvin-float" class="md-nav__link">
+    kelvin_to_fahrenheit(kelvin: float)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperature-instance" class="md-nav__link">
+    Temperature instance
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperature instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperaturevalue-float-scale-literalcelsius-c-kelvin-k-fahrenheit-f" class="md-nav__link">
+    Temperature(value: float, scale: Literal['celsius', 'c', 'kelvin', 'k', 'fahrenheit', 'f'])
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperature(value: float, scale: Literal['celsius', 'c', 'kelvin', 'k', 'fahrenheit', 'f'])">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperaturefrom_celsiuscelsius_value-float" class="md-nav__link">
+    Temperature.from_celsius(celsius_value: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperaturefrom_fahrenheitfahrenheit_value-float" class="md-nav__link">
+    Temperature.from_fahrenheit(fahrenheit_value: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperaturefrom_kelvinkelvin_value-float" class="md-nav__link">
+    Temperature.from_kelvin(kelvin_value: float)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperaturecelsius" class="md-nav__link">
+    Temperature.celsius
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperaturefahrenheit" class="md-nav__link">
+    Temperature.fahrenheit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperaturekelvin" class="md-nav__link">
+    Temperature.kelvin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    Example code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matrix/" class="md-nav__link">
+        Matrix
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="temperature">Temperature</h1>
+<p>In this document are detailed all functionalities that <strong>Pymath Tools</strong> offers for solutions oriented to work with temperature in one or multiple scales.</p>
+<h2 id="functions">Functions</h2>
+<p>The package provides multiple functions to convert temperature among all the <a href="https://en.wikipedia.org/wiki/Scale_of_temperature">temperature scales</a>: Celsius, Fahrenheit and Kelvin.</p>
+<h4 id="celsius_to_fahrenheitcelsius-float"><code>celsius_to_fahrenheit(celsius: float)</code></h4>
+<p>Takes a temperature measurement in Celsius and returns its equivalent in the Fahrenheit scale. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">pymath_tools.functions</span> <span class="kn">import</span> <span class="n">celsius_to_fahrenheit</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">celsius_to_fahrenheit</span><span class="p">(</span><span class="mf">37.0</span><span class="p">))</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># &#39;98.6&#39; is printed</span>
+</code></pre></div>
+<h4 id="celsius_to_kelvincelsius-float"><code>celsius_to_kelvin(celsius: float)</code></h4>
+<p>Takes a temperature measurement in Celsius and returns its equivalent in the Kelvin scale. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">pymath_tools.functions</span> <span class="kn">import</span> <span class="n">celsius_to_kelvin</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">celsius_to_kelvin</span><span class="p">(</span><span class="mf">37.0</span><span class="p">))</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># &#39;310.15&#39; is printed</span>
+</code></pre></div>
+<h4 id="fahrenheit_to_celsiusfahrenheit-float"><code>fahrenheit_to_celsius(fahrenheit: float)</code></h4>
+<p>Takes a temperature measurement in Fahrenheit and returns its equivalent in the Celsius scale.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">pymath_tools.functions</span> <span class="kn">import</span> <span class="n">fahrenheit_to_celsius</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="mf">98.6</span><span class="p">))</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># &#39;37.0&#39; is printed</span>
+</code></pre></div>
+<h4 id="fahrenheit_to_kelvinfahrenheit-float"><code>fahrenheit_to_kelvin(fahrenheit: float)</code></h4>
+<p>Takes a temperature measurement in Fahrenheit and returns its equivalent in the Kelvin scale.
+The function is equivalent to converting the value first to Celsius and then to Kelvin.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">pymath_tools.functions</span> <span class="kn">import</span> <span class="n">fahrenheit_to_kelvin</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">fahrenheit_to_kelvin</span><span class="p">(</span><span class="mf">98.6</span><span class="p">))</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># &#39;310.15&#39; is printed</span>
+</code></pre></div>
+<h4 id="kelvin_to_celsiuskelvin-float"><code>kelvin_to_celsius(kelvin: float)</code></h4>
+<p>Takes a temperature measurement in Kelvin and returns its equivalent in the Celsius scale.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">pymath_tools.functions</span> <span class="kn">import</span> <span class="n">kelvin_to_celsius</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">kelvin_to_celsius</span><span class="p">(</span><span class="mf">310.15</span><span class="p">))</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># &#39;37.0&#39; is printed</span>
+</code></pre></div>
+<h4 id="kelvin_to_fahrenheitkelvin-float"><code>kelvin_to_fahrenheit(kelvin: float)</code></h4>
+<p>Takes a temperature measurement in Kelvin and returns its equivalent in the Fahrenheit scale.
+The function is equivalent to converting the value first to Celsius and then to Fahrenheit.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">pymath_tools.functions</span> <span class="kn">import</span> <span class="n">kelvin_to_celsius</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">kelvin_to_celsius</span><span class="p">(</span><span class="mf">310.15</span><span class="p">))</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># &#39;98.6&#39; is printed</span>
+</code></pre></div>
+<h2 id="temperature-instance">Temperature instance</h2>
+<p>The <code>Temperature</code> instances work as a wrapper for the functions, providing a continuous simple and easy usage of them.</p>
+<h3 id="temperaturevalue-float-scale-literalcelsius-c-kelvin-k-fahrenheit-f"><code>Temperature(value: float, scale: Literal['celsius', 'c', 'kelvin', 'k', 'fahrenheit', 'f'])</code></h3>
+<p>Class to be initialized for any temperature scale.</p>
+<ul>
+<li><code>value</code> must hold the temperature measurement. </li>
+<li><code>scale</code> must be a string that defines to which scale the temperature has been measured. The string must be either the scale in lowercase ('celsius', 'kelvin', 'fahrenheit') or the initial of the scale, also in lowercase ('c', 'k', 'f').</li>
+</ul>
+<h4 id="temperaturefrom_celsiuscelsius_value-float"><code>Temperature.from_celsius(celsius_value: float)</code></h4>
+<p>Initializes the class from a Celsius value.</p>
+<h4 id="temperaturefrom_fahrenheitfahrenheit_value-float"><code>Temperature.from_fahrenheit(fahrenheit_value: float)</code></h4>
+<p>Initializes the class from a Fahrenheit value.</p>
+<h4 id="temperaturefrom_kelvinkelvin_value-float"><code>Temperature.from_kelvin(kelvin_value: float)</code></h4>
+<p>Initializes the class from a Kelvin value.</p>
+<h4 id="temperaturecelsius"><code>Temperature.celsius</code></h4>
+<p>Property that returns the value within the Celsius scale of the measurement hold within the class.</p>
+<h4 id="temperaturefahrenheit"><code>Temperature.fahrenheit</code></h4>
+<p>Property that returns the value within the Celsius scale of the measurement hold within the class.</p>
+<h4 id="temperaturekelvin"><code>Temperature.kelvin</code></h4>
+<p>Property that returns the value within the Celsius scale of the measurement hold within the class.</p>
+<h3 id="example-code">Example code</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">pymath_tools.instances</span> <span class="kn">import</span> <span class="n">Temperature</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">temperature</span> <span class="o">=</span> <span class="n">Temperature</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;celsius&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">celsius</span><span class="p">)</span>  <span class="c1"># This prints &#39;100.0&#39;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">kelvin</span><span class="p">)</span>  <span class="c1"># This prints &#39;373.15&#39;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">fahrenheit</span><span class="p">)</span>  <span class="c1"># This prints &#39;212.0&#39;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">temperature</span> <span class="o">=</span> <span class="n">Temperature</span><span class="o">.</span><span class="n">from_celsius</span><span class="p">(</span><span class="mf">24.0</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">celsius</span><span class="p">)</span>  <span class="c1"># This prints &#39;24.0&#39;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">temperature</span> <span class="o">=</span> <span class="n">Temperature</span><span class="o">.</span><span class="n">from_kelvin</span><span class="p">(</span><span class="mf">297.15</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">celsius</span><span class="p">)</span>  <span class="c1"># This prints &#39;24.0&#39;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">temperature</span> <span class="o">=</span> <span class="n">Temperature</span><span class="o">.</span><span class="n">from_fahrenheit</span><span class="p">(</span><span class="mf">75.2</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">celsius</span><span class="p">)</span>  <span class="c1"># This prints &#39;24.0&#39;</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Jtachan/PyMathTools" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jaime-gonzalezg/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
