@@ -1,3 +1,23 @@
+# Status note
+
+The project is currently frozen. I have other projects to finish first.
+
+The following changes are to be performed to bring this project back to life:
+
+- [ ] Update package files to use '.toml' instead of 'setup.py'
+- [ ] Simplify usage & docs
+- [ ] Use Sphinx instead of mkdocs
+- [ ] Update logic of classes/functions to use CPython
+
+# Pymath Tools
+
+This is a personal project to generate functions and classes using as much CPython as possible.
+The goal of the project is to obtain proficiency with:
+
+- CPython
+- Sphinx
+- GitHub actions
+
 # Pymath Tools Documentation
 
 ![Badge](https://github.com/Jtachan/PyMathTools/actions/workflows/unittests.yml/badge.svg)
