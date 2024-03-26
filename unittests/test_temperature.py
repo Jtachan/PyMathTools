@@ -5,7 +5,7 @@ that class is being directly tested.
 """
 import pytest
 
-from pymath_tools.instances import Temperature
+from src.pymath_tools.instances import Temperature
 
 
 @pytest.mark.parametrize(

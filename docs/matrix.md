@@ -16,7 +16,7 @@ Class to be initialized for the desired 2-dimensional matrix.
 The parameter `matrix` must hold either a 2D numpy array or a 2D matrix defined as a tuple.
 
 ```python
-from pymath_tools.instances import GenericMatrix
+from src.pymath_tools.instances import GenericMatrix
 
 mat = GenericMatrix(matrix=([1, 2], [3, 4]))
 ```

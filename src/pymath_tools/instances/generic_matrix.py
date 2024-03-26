@@ -8,7 +8,7 @@ from typing import Iterator, Sequence, Tuple, Union
 import numpy as np
 import numpy.typing as npt
 
-from pymath_tools.instances.exceptions import DimensionError, SingularMatrixError
+from src.pymath_tools.instances.exceptions import DimensionError, SingularMatrixError
 
 
 class GenericMatrix:

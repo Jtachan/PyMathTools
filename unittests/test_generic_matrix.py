@@ -6,7 +6,7 @@ from random import randint
 import numpy as np
 import pytest
 
-from pymath_tools.instances import GenericMatrix
+from src.pymath_tools.instances import GenericMatrix
 
 
 @pytest.mark.parametrize(

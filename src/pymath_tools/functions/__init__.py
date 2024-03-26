@@ -2,7 +2,7 @@
 This inner package contains all the functions for them to be imported easily
 """
 
-from pymath_tools.functions.temperature import (
+from src.pymath_tools.functions.temperature import (
     celsius_to_fahrenheit,
     celsius_to_kelvin,
     fahrenheit_to_celsius,

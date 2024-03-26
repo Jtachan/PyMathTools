@@ -1,0 +1,33 @@
+[project]
+name = "pymath-tools"
+authors = [
+    { name = "Jaime Gonzalez Gomez", email = "jim.gomez.dnn@gmail.com" },
+]
+description = "The package contains simple and easy usable math functions and instances for general use."
+urls = { Source = "https://github.com/Jtachan/PyMathTools.git" }
+dependencies = [
+    "numpy",
+    "cython"
+]
+requires-python = ">=3.8"
+license = { text = "MIT license" }
+dynamic = ["readme", "version"]
+
+# you can add CLI tools which should be installed when installing the package
+# [project.scripts]
+# cli-command = "pkg_name.module:function"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "pymath_tools._version.__version__" }
+readme = { file = ["README.md"], content-type = "text/markdown" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.isort]
+profile = "black"
+src_paths = ["src", "unittests"]

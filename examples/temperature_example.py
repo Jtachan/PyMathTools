@@ -4,7 +4,7 @@ Small example code on how to work with the Temperature class
 
 import random
 
-from pymath_tools.instances import Temperature
+from src.pymath_tools.instances import Temperature
 
 if __name__ == "__main__":
     t1 = Temperature(value=random.randint(0, 100), scale="celsius")

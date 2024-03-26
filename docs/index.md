@@ -15,10 +15,11 @@ The tool is very simple to use due to:
 Due to those reasons, `PymathTools` is also perfect for academic/learning purposes.
 
 ```python
-from pymath_tools.instances import Temperature
+from src.pymath_tools.instances import Temperature
 
 measure = Temperature.from_fahrenheit(365)
-print(f"Preheat the oven to {measure.fahrenheit} °F ({measure.celsius} °C) for baking the cake")
+print(
+    f"Preheat the oven to {measure.fahrenheit} °F ({measure.celsius} °C) for baking the cake")
 # Preheat the oven to 365.0 °F (185.0 °C) for baking the cake
 ```
 

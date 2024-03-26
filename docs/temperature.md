@@ -8,10 +8,10 @@ The package provides multiple functions to convert temperature among all the [te
 
 #### `celsius_to_fahrenheit(celsius: float)`
 
-Takes a temperature measurement in Celsius and returns its equivalent in the Fahrenheit scale. 
+Takes a temperature measurement in Celsius and returns its equivalent in the Fahrenheit scale.
 
 ```python
-from pymath_tools.functions import celsius_to_fahrenheit
+from src.pymath_tools.functions import celsius_to_fahrenheit
 
 print(celsius_to_fahrenheit(37.0))
 # '98.6' is printed
@@ -19,10 +19,10 @@ print(celsius_to_fahrenheit(37.0))
 
 #### `celsius_to_kelvin(celsius: float)`
 
-Takes a temperature measurement in Celsius and returns its equivalent in the Kelvin scale. 
+Takes a temperature measurement in Celsius and returns its equivalent in the Kelvin scale.
 
 ```python
-from pymath_tools.functions import celsius_to_kelvin
+from src.pymath_tools.functions import celsius_to_kelvin
 
 print(celsius_to_kelvin(37.0))
 # '310.15' is printed
@@ -33,7 +33,7 @@ print(celsius_to_kelvin(37.0))
 Takes a temperature measurement in Fahrenheit and returns its equivalent in the Celsius scale.
 
 ```python
-from pymath_tools.functions import fahrenheit_to_celsius
+from src.pymath_tools.functions import fahrenheit_to_celsius
 
 print(fahrenheit_to_celsius(98.6))
 # '37.0' is printed
@@ -45,7 +45,7 @@ Takes a temperature measurement in Fahrenheit and returns its equivalent in the 
 The function is equivalent to converting the value first to Celsius and then to Kelvin.
 
 ```python
-from pymath_tools.functions import fahrenheit_to_kelvin
+from src.pymath_tools.functions import fahrenheit_to_kelvin
 
 print(fahrenheit_to_kelvin(98.6))
 # '310.15' is printed
@@ -56,7 +56,7 @@ print(fahrenheit_to_kelvin(98.6))
 Takes a temperature measurement in Kelvin and returns its equivalent in the Celsius scale.
 
 ```python
-from pymath_tools.functions import kelvin_to_celsius
+from src.pymath_tools.functions import kelvin_to_celsius
 
 print(kelvin_to_celsius(310.15))
 # '37.0' is printed
@@ -68,7 +68,7 @@ Takes a temperature measurement in Kelvin and returns its equivalent in the Fahr
 The function is equivalent to converting the value first to Celsius and then to Fahrenheit.
 
 ```python
-from pymath_tools.functions import kelvin_to_celsius
+from src.pymath_tools.functions import kelvin_to_celsius
 
 print(kelvin_to_celsius(310.15))
 # '98.6' is printed
@@ -115,7 +115,7 @@ Property that returns the value within the Celsius scale of the measurement hold
 ### Example code
 
 ```python
-from pymath_tools.instances import Temperature
+from src.pymath_tools.instances import Temperature
 
 temperature = Temperature(value=100, scale="celsius")
 print(temperature.celsius)  # This prints '100.0'
